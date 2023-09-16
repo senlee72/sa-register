@@ -1,5 +1,5 @@
-<div id="formsuccess" style="background: green; color:#fff"/>
-<div id="formerror" style="background:red; color:#fff"/>
+<div id="formsuccess" style="background: green; color:#fff"></div>
+<div id="formerror" style="background:red; color:#fff"></div>
 
 <form id="regFormPage">
     <?php wp_nonce_field('wp_rest');?>
@@ -21,7 +21,6 @@
                     $("#formsuccess").html("Your message was sent").fadeIn();
                 },
                 error: function() {
-                    form.hide();
                     $("#formerror").html("There was an error").fadeIn();
                 }
             });
