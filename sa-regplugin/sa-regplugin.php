@@ -23,6 +23,7 @@
     }
 
  }
+ #create new instance
  new RegEnroll;
 }
 ?>
