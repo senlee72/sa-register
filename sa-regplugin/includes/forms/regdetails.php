@@ -10,7 +10,7 @@
             var form = $(this);
             $.ajax({
                 type: "POST",
-                url: "<?php echo get_rest_url( null, "v1/regformapi/submit" ) ?>",
+                url: "<?php echo get_rest_url( null, "v1/regformapi/submit" );?>",
                 data: form.serialize()
             });
         })
