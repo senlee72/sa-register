@@ -6,9 +6,13 @@
 <script>
     jQuery(document).ready(function($) {
         $("#regFormPage").submit( function (e) {
-                 alert('Form submited');
-                 e.preventDefault();
-
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: "<?php echo get_rest_url( null, "v1/regformapi/submit" ) ?>",
+                data: form.serialize()
+            });
         })
     }); 
 </script>

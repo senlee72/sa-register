@@ -10,5 +10,8 @@ function create_rest_endpoint() {
         'method' => 'POST',
         'callback' => 'handle_form_submit'
 ));
-    
+}
+
+function handle_form_submit() {
+    echo 'HANDLED FOR SUBMISSION';   
 }
