@@ -8,11 +8,11 @@ add_action('carbon_fields_register_fields', 'create_options_page');
 
 function load_carbon_fields() {
     \Carbon_Fields\Carbon_Fields::boot();
-    error_log('LOADED CARBON FIELDS', 3, DEBUG_LOG );
+    error_log('LOADED CARBON FIELDS'.PHP_EOL, 3, DEBUG_LOG );
 }
 
 function create_options_page() {
-    error_log('CREATING OPTIONS PAGE', 3, DEBUG_LOG );
+    error_log('CREATING OPTIONS PAGE'.PHP_EOL, 3, DEBUG_LOG );
     Container::make( 'theme_options', __( ' Theme Options' ) ) 
     ->add_fields( array(
         Field::make( 'text', 'crb_facebook_url', __('Facebook URL')) ,

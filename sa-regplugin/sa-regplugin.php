@@ -18,7 +18,7 @@
 
         require_once( MY_PLUGIN_PATH.'vendor/autoload.php');
         
-        error_log('TEST LOGGING', 3, DEBUG_LOG );
+        error_log('DEBUG LOG: '.MY_PLUGIN_PATH.PHP_EOL, 3, DEBUG_LOG );
     }
 
     public function initialize() {
@@ -30,6 +30,6 @@
  #create new instance
  $regEnroll = new RegEnroll;
  $regEnroll->initialize();
- 
+
 }
 ?>
