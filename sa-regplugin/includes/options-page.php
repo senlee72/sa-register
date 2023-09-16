@@ -10,7 +10,7 @@ function load_carbon_fields() {
     \Carbon_Fields\Carbon_Fields::boot();
 }
 
-function create_option_page() {
+function create_options_page() {
     Container::make( 'theme_options', 'Theme Options' )
     ->add_fields( array(
         Field::make( 'text', 'crb_facebook_url') ,
