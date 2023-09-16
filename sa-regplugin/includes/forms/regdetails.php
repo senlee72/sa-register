@@ -7,8 +7,8 @@
     jquery(d).ready(function($) {
         $("#regFormPage").submit(
             function (e) {
+                alert('Form submited');
                  e.preventDefault();
-                 alert('Form submited');
             }
         )
     }); 
