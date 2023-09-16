@@ -5,11 +5,10 @@
 </form>
 <script>
     jquery(document).ready(function($) {
-        $("#regFormPage").submit(
-            function (e) {
-                alert('Form submited');
+        $("#regFormPage").submit( function (e) {
+                 alert('Form submited');
                  e.preventDefault();
-            }
-        )
+
+        })
     }); 
 </script>
