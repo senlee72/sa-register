@@ -17,9 +17,11 @@
                 url: "<?php echo get_rest_url( null, "v1/regformapi/submit" );?>",
                 data: form.serialize(),
                 success: function() {
+                    form.hide();
                     $("#formsuccess").html("Your message was sent").fadeIn();
                 },
                 error: function() {
+                    form.hide();
                     $("#formerror").html("There was an error").fadeIn();
                 }
             });
