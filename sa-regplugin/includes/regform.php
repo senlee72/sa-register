@@ -15,8 +15,8 @@ function create_rest_endpoint() {
 
 function handle_form_submit($data) {
     $params = $data->get_params();
-    error_log($params, 3, DEBUG_LOG);
-    
+    error_log('PARAMS '. $params, 3, DEBUG_LOG);
+
     if (!wp_verify_nonce($params['_wpnonce'], 'wp_rest')) {
         return new WP_REST_Response('Message not handled', 422);
     }
