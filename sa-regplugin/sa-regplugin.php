@@ -28,6 +28,8 @@
 
  }
  #create new instance
- new RegEnroll;
+ $regEnroll = new RegEnroll;
+ $regEnroll->initialize();
+ 
 }
 ?>
