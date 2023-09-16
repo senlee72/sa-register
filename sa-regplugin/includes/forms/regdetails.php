@@ -1,4 +1,5 @@
 <form id="regFormPage">
+    <?php wp_nonce_field('wp_rest');?>
     <label>Name</label>
     <input type="text" name="name"> <br/>
     <button type="submit">Submit Form</button>
