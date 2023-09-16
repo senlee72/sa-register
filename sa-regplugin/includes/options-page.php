@@ -13,10 +13,13 @@ function load_carbon_fields() {
 
 function create_options_page() {
     error_log('CREATING OPTIONS PAGE'.PHP_EOL, 3, DEBUG_LOG );
-    Container::make( 'theme_options', __( ' Theme Options' ) ) 
+    Container::make( 'theme_options', ' Theme Options') 
     ->add_fields( array(
-        Field::make( 'text', 'crb_facebook_url', __('Facebook URL')) ,
-        Field::make( 'textarea', 'crb_footer_text', __( 'Footer Text'))
+        Field::make( 'text', 'regplugin_email', 'Email')->set_attribute('placeholder', 'ex: your@email.com')
+        ->set_help_text('Email used to send to receipients'),
+
+        Field::make( 'textarea', 'regplugin_confmsg', 'Confirmation Message')->set_attribute('placeholder', 'Enter confirmation message')
+        ->set_help_text('Email message sent during confirmation')
     ) );
 
 }
