@@ -4,7 +4,7 @@
     <button type="submit">Submit Form</button>
 </form>
 <script>
-    jquery(d).ready(function($) {
+    jquery(document).ready(function($) {
         $("#regFormPage").submit(
             function (e) {
                 alert('Form submited');
