@@ -20,5 +20,6 @@ function handle_form_submit($data) {
     if (!wp_verify_nonce($params['_wpnonce'], 'wp_rest')) {
         return new WP_REST_Response('Message not handled', 422);
     }
-    echo 'HANDLED FOR SUBMISSION';   
+    wp_mail( 'admin@gmail.com', 'TEST SUBJECT', 'TEST MESSGAGE', "From: {$params['name']}" );
+    echo 'HANDLED FOR SUBMISSION';
 }
