@@ -203,7 +203,9 @@
             //"registration_amt" => $_POST['totalRegCost'],
             "created_by" => "pc2023registration"
         ];
-        error_log("INSERTING PERSONAL DETAILS: ".$uname." BEGIN");
+        error_log("INSERTING PERSONAL DETAILS: ".$uname. " BEGIN");
+        print_r($perArray);
+        
         $wpdb -> insert($table_name, $perArray, $format);
         $userid = $wpdb->insert_id;
         error_log("INSERTING PERSONAL DETAILS: ".$userid."END");
