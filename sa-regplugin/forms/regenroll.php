@@ -1057,7 +1057,7 @@
                     <label  class="control-label" for="mobileno">Mobile#</label>
                     <div class="input-group">
                         <div class="input-group-prepend input-group-text"><span class="oi oi-phone"></span></div>                    
-                        <input type="tel" class="form-control" id="mobileno" name="mobileno" maxlength="10" pattern="[0-9]{10}" size="10" placeholder="enter mobile#" value="" required>
+                        <input type="tel" class="form-control" id="mobileno" name="mobileno" maxlength="10" pattern="[0-9]{10}" size="10" placeholder="enter mobiles#" value="" required>
                     </div>
                 </div>
                 <div class="form-group col-md-3 pr-4 pb-3 required">
