@@ -1,11 +1,18 @@
 <?php 
-add_shortcode( 'regform', 'create_reg_form' );
+add_shortcode( 'regenroll', 'create_reg_enroll' );
+add_shortcode( 'regsubmit', 'create_reg_submit' );
+
 add_action('rest_api_init', 'create_rest_endpoint' );
 add_action('wp_enqueue_scripts', 'registration_scripts');
 
-function create_reg_form() {
+function create_reg_enroll() {
     //include MY_PLUGIN_PATH . 'includes/forms/regdetails.php';
     include MY_PLUGIN_PATH . '/forms/regenroll.php';
+}
+
+function create_reg_submit() {
+    //include MY_PLUGIN_PATH . 'includes/forms/regdetails.php';
+    include MY_PLUGIN_PATH . '/forms/regsubmit.php';
 }
 
 function create_rest_endpoint() {

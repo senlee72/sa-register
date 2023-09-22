@@ -63,6 +63,10 @@ CREATE TABLE `sa_regprice_model` (
   `updated_by` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+--
+-- Table structure for table `sa_regprice_model`
+--
+
 ALTER TABLE `sa_user_info`
   ADD PRIMARY KEY (`user_id`);
 
@@ -107,7 +111,7 @@ ALTER TABLE `sa_user_members`
 --
 ALTER TABLE `sa_regprice_model`
   MODIFY `regprice_model_id` int NOT NULL AUTO_INCREMENT;
-  
+
 --
 -- Constraints for table `sa_user_members`
 --
@@ -119,4 +123,7 @@ ALTER TABLE `sa_user_members`
 --
 ALTER TABLE `sa_user_registration`
   ADD CONSTRAINT `FK_USERID_STATUS` FOREIGN KEY (`user_id`) REFERENCES `sa_user_info` (`user_id`) ON DELETE CASCADE;
+
+INSERT INTO `sa_regprice_model` (`regprice_model_id`, `base_reg_price`, `child_price`, `child_agelimit`, `kid_18below_price`, `kid_agelimit`, `adult_price`, `discount_rate`, `discount_desc`, `valid_until`, `created_ts`, `created_by`, `updated_ts`, `updated_by`) VALUES
+(1, 0, 0, 5, 30, 12, 60, 1, 'EARLY BIRD', '2023-05-31', '2019-10-01 01:35:12', 'pc2020', '2023-04-08 16:08:29', 'pc2020');
 
