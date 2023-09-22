@@ -559,7 +559,7 @@
             <p>Please remember that if you can't complete the transaction for any reason, please revisit the Registration page to complete any pending transaction.</p>
             <p>After submitting your credit card details, you'll be taken to a confirmation page displaying your transaction details. Please save the information for future reference.</p>
         <div>
-            <form action="<?=$webRoot?>/striperegcheckout.php" method="post" class="form-inline mb-4">
+            <form action="<?=$webRoot?>/regpay" method="post" class="form-inline mb-4">
                 <input type="hidden" name="email" value="<?=$email?>"/>
 				<button  class="btn btn-outline-success my-sm-0" type="submit" name="refid" value="<?=$refid?>">Pay Now</button>
             </form>      

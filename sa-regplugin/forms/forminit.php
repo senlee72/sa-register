@@ -1,6 +1,7 @@
 <?php 
 add_shortcode( 'regenroll', 'create_reg_enroll' );
 add_shortcode( 'regsubmit', 'create_reg_submit' );
+add_shortcode( 'regpay', 'create_reg_pay' );
 
 add_action('rest_api_init', 'create_rest_endpoint' );
 add_action('wp_enqueue_scripts', 'registration_scripts');
@@ -15,6 +16,9 @@ function create_reg_submit() {
     include MY_PLUGIN_PATH . '/forms/regsubmit.php';
 }
 
+function create_reg_pay() {
+    include MY_PLUGIN_PATH . '/forms/striperegcheckout.php';
+}
 function create_rest_endpoint() {
     register_rest_route( 'v1/regformapi', 'submit', array(
         'methods' => 'POST',
