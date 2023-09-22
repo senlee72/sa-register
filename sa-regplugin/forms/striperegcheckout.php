@@ -28,27 +28,12 @@
 	global $prd_conv_kid;
 	global $apikey;
 
-	//livemode data
-	$apikey = "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"; // PROD KEY
-	$prd_mem_sa ="price_1MxCJZHn7Uww4RvuGBGnWLuX";
-	//$prd_conv_donate = "price_1MxCJUHn7Uww4RvuALIVAkPm";//$25 donation
-	$prd_conv_adult = "price_1MxCJLHn7Uww4RvuT6KkfChe";
-	$prd_conv_kid = "price_1MxCJEHn7Uww4Rvu0kldOxa8";
-	$prd_conv_donate = "price_1MzidfHn7Uww4RvuxmI2kZaQ";//$1 donation changes
-
-	//livemode data - PENNY MODE
-	//$apikey = "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"; // PROD KEY
-	//$prd_mem_sa ="price_1MxCn9Hn7Uww4RvuhRM6iNm0";
-	//$prd_conv_donate = "price_1MxCniHn7Uww4RvuDkKKIoPH";
-	//$prd_conv_adult = "price_1MxCoXHn7Uww4RvurrAGWUUH";
-	//$prd_conv_kid = "price_1MxCp3Hn7Uww4Rvu7sUR3J6n";
-
 	//testmode data
-	//$apikey = "sk_test_51MmQvkHn7Uww4RvuWGdrdkXH2qEJBcir4iw5VFXfTVikierK3NRztYKei7vsb3nYgpWJdgftZLZrlEhiGoOjQP0C00NQfMcnws"; //Test Key	
-	//$prd_conv_adult = "price_1MueyjHn7Uww4RvuOrqH7jaJ";
-	//$prd_conv_kid = "price_1MsI3CHn7Uww4Rvuwkrm1kWE";
-	//$prd_mem_sa = "price_1MuyWqHn7Uww4Rvu3W9DSf8U";
-	//$prd_conv_donate = "price_1MsCooHn7Uww4Rvuab2hpMDM";
+	$apikey = "sk_test_51MmQvkHn7Uww4RvuWGdrdkXH2qEJBcir4iw5VFXfTVikierK3NRztYKei7vsb3nYgpWJdgftZLZrlEhiGoOjQP0C00NQfMcnws"; //Test Key	
+	$prd_conv_adult = "price_1MueyjHn7Uww4RvuOrqH7jaJ";
+	$prd_conv_kid = "price_1MsI3CHn7Uww4Rvuwkrm1kWE";
+	$prd_mem_sa = "price_1MuyWqHn7Uww4Rvu3W9DSf8U";
+	$prd_conv_donate = "price_1MsCooHn7Uww4Rvuab2hpMDM";
 
 	$memberFAMILYCOST = 30;
 	$memberINDCOST = 15;
