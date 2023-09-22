@@ -125,5 +125,33 @@ ALTER TABLE `sa_user_registration`
   ADD CONSTRAINT `FK_USERID_STATUS` FOREIGN KEY (`user_id`) REFERENCES `sa_user_info` (`user_id`) ON DELETE CASCADE;
 
 INSERT INTO `sa_regprice_model` (`regprice_model_id`, `base_reg_price`, `child_price`, `child_agelimit`, `kid_18below_price`, `kid_agelimit`, `adult_price`, `discount_rate`, `discount_desc`, `valid_until`, `created_ts`, `created_by`, `updated_ts`, `updated_by`) VALUES
-(1, 0, 0, 5, 30, 12, 60, 1, 'EARLY BIRD', '2023-05-31', '2019-10-01 01:35:12', 'pc2020', '2023-04-08 16:08:29', 'pc2020');
+(1, 0, 0, 5, 30, 12, 60, 1, 'EARLY BIRD', '2023-05-31', '2019-10-01 01:35:12', 'sa', '2023-04-08 16:08:29', 'sa');
 
+--
+-- Table structure for table `sa_user_activity_log`
+--
+
+CREATE TABLE `sa_user_activity_log` (
+  `activity_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `event` varchar(25) NOT NULL,
+  `ref_id` varchar(25) DEFAULT NULL,
+  `comment` varchar(200) DEFAULT NULL,
+  `created_by` varchar(25) NOT NULL,
+  `created_ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_by` varchar(25) NOT NULL,
+  `updated_ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Indexes for table `sa_user_activity_log`
+--
+ALTER TABLE `sa_user_activity_log`
+  ADD PRIMARY KEY (`activity_id`),
+  ADD KEY `IDX_HIST_USERID` (`user_id`) USING BTREE;
+  
+  --
+-- AUTO_INCREMENT for table `sa_user_activity_log`
+--
+ALTER TABLE `sa_user_activity_log`
+  MODIFY `activity_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;

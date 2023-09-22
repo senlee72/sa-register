@@ -55,11 +55,11 @@
                     $addMemberArr = json_decode($escValue1, true);
                     // print_r($arr);
                 }
-                if ($key == 'regprice') {
-                    $escValue2 = stripcslashes($value);
-                    $regprice = json_decode($escValue2, true);
-                    // print_r($arr);
-                }                
+                // if ($key == 'regprice') {
+                //     $escValue2 = stripcslashes($value);
+                //     $regprice = json_decode($escValue2, true);
+                //     // print_r($arr);
+                // }                
             }
         }else {
             $url = get_site_url();
@@ -138,21 +138,21 @@
                 $rDonationID = insertDonationDetails();
             }
 
-            if (isItemwiseSponsorExist()) {
-                error_log("INSERTING ITEMWISE SPONSORSHIP DETAILS ");
-                $rItemSponsorID = insertItemSponsorDetails();
-            }
+            // if (isItemwiseSponsorExist()) {
+            //     error_log("INSERTING ITEMWISE SPONSORSHIP DETAILS ");
+            //     $rItemSponsorID = insertItemSponsorDetails();
+            // }
 
             //addd for SA membership
-            if ($_POST['membersa']) {
-                $rMemberID = getMemberSAIfExists($userid);
-                if (empty($rMemberID)) {
-                    error_log("INSERTING SA MEMBERSHIP DETAILS ");
-                    $rMemberID = insertMemberSADetails($userid);
-                }else {
-                    error_log("!!!!!USER ". $userid. " IS ALREADY A SA MEMEBR!!!!!");
-                }
-            }
+            // if ($_POST['membersa']) {
+            //     $rMemberID = getMemberSAIfExists($userid);
+            //     if (empty($rMemberID)) {
+            //         error_log("INSERTING SA MEMBERSHIP DETAILS ");
+            //         $rMemberID = insertMemberSADetails($userid);
+            //     }else {
+            //         error_log("!!!!!USER ". $userid. " IS ALREADY A SA MEMEBR!!!!!");
+            //     }
+            // }
 
             $donationID = null;
             $itemSponsorID = null;
@@ -166,7 +166,7 @@
             $regid = insertRegistration();
             
             error_log("INSERTING PRICE DETAILS ");
-            $paymentid = insertRegistrationPrice($regprice, $regid, $donationID, $itemSponsorID, $memberID);
+            //$paymentid = insertRegistrationPrice($regprice, $regid, $donationID, $itemSponsorID, $memberID);
 
             error_log("INSERTING MEMBER DETAILS with Payment ID ". $paymentid);
             insertAddMembers($addMemberArr, $paymentid);
@@ -377,7 +377,7 @@
             ];
             $wpdb -> insert($table_name, $regpriceArray, $format);
             $regpriceid = $wpdb->insert_id;
-            return insertPaymentDetails($regpriceid, $regprice['subTotal1'], $regprice['subTotal2'], $donationID, $itemSponsorID, $memberID); 
+            insertPaymentDetails($regpriceid, $regprice['subTotal1'], $regprice['subTotal2'], $donationID, $itemSponsorID, $memberID); 
     }}   
 
     if (!function_exists('insertRegistration')) {
