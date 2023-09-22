@@ -239,7 +239,6 @@
                 // print_r($mem);
                 $memArray = [
                     "user_id"           => $userid,
-                    "payment_id"        => $paymentid,
                     "m_first_name"      => $mem['fname'],
                     "m_last_name"       => $mem['lname'],
                     "m_relationship"    => $mem['relationship'],
