@@ -186,7 +186,7 @@
         global $uname;
         global $userid;
         $table_name = "sa_user_info";
-        $format = array('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');
+        $format = array('%s','%s','%s','%s','%s','%s','%s','%s','%s');
 
         $perArray = [
             "login_id" => $uname,
