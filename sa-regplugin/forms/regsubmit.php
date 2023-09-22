@@ -188,7 +188,7 @@
         global $uname;
         global $userid;
         $table_name = "sa_user_info";
-        $format = array('%s','%s','%s','%s','%s','%s','%s','%s','%s');
+        $format = array('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');
 
         $perArray = [
             "login_id" => $uname,
@@ -203,7 +203,7 @@
             //"registration_amt" => $_POST['totalRegCost'],
             "created_by" => "pc2023registration"
         ];
-        error_log("INSERTING PERSONAL DETAILS: BEGIN");
+        error_log("INSERTING PERSONAL DETAILS: ".$uname." BEGIN");
         $wpdb -> insert($table_name, $perArray, $format);
         $userid = $wpdb->insert_id;
         error_log("INSERTING PERSONAL DETAILS: ".$userid."END");
