@@ -1,7 +1,7 @@
 <?php 
 add_shortcode( 'regform', 'create_reg_form' );
 add_action('rest_api_init', 'create_rest_endpoint' );
-add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+add_action('wp_enqueue_scripts', 'registration_scripts');
 
 function create_reg_form() {
     //include MY_PLUGIN_PATH . 'includes/forms/regdetails.php';
