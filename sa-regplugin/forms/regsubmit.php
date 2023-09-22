@@ -204,8 +204,8 @@
             "created_by" => "pc2023registration"
         ];
         error_log("INSERTING PERSONAL DETAILS: ".$uname. " BEGIN");
-        print_r($perArray);
-        
+        //print_r($perArray);
+
         $wpdb -> insert($table_name, $perArray, $format);
         $userid = $wpdb->insert_id;
         error_log("INSERTING PERSONAL DETAILS: ".$userid."END");
