@@ -168,8 +168,8 @@
             error_log("INSERTING PRICE DETAILS ");
             //$paymentid = insertRegistrationPrice($regprice, $regid, $donationID, $itemSponsorID, $memberID);
 
-            error_log("INSERTING MEMBER DETAILS with Payment ID ". $paymentid);
-            insertAddMembers($addMemberArr, $paymentid);
+            //error_log("INSERTING MEMBER DETAILS with Payment ID ". $paymentid);
+            insertAddMembers($addMemberArr);
 
             logActivity("REGISTRATION", $regid, "USER INPUT COMPLETED");
         }catch(Exception $e) {
@@ -229,7 +229,7 @@
         }}
 
     if (!function_exists('insertAddMembers')) {
-        function insertAddMembers($addMemberArr, $paymentid) {
+        function insertAddMembers($addMemberArr) {
             global $wpdb;
             global $userid;
             $table_name = "sa_user_members";
