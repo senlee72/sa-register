@@ -70,9 +70,11 @@
     
         if (!empty($userid)) {
             //update personal details
+            error_log($ctx."UPDATING PERSONAL DETAILS");
             updatePersonalDetails();
         }else {
             // insert personal details
+            error_log($ctx."INSERTING PERSONAL DETAILS");
             insertPersonalDetails();
         }
 
@@ -201,9 +203,10 @@
             //"registration_amt" => $_POST['totalRegCost'],
             "created_by" => "pc2023registration"
         ];
-
+        error_log("INSERTING PERSONAL DETAILS: BEGIN");
         $wpdb -> insert($table_name, $perArray, $format);
         $userid = $wpdb->insert_id;
+        error_log("INSERTING PERSONAL DETAILS: ".$userid."END");
     }}
 
     if (!function_exists('updatePersonalDetails')) {
