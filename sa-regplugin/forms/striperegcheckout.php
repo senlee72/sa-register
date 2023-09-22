@@ -28,7 +28,7 @@
 	global $prd_conv_kid;
 	global $apikey;
 
-	//testmode data
+	// testmode data
 	$apikey = "sk_test_51MmQvkHn7Uww4RvuWGdrdkXH2qEJBcir4iw5VFXfTVikierK3NRztYKei7vsb3nYgpWJdgftZLZrlEhiGoOjQP0C00NQfMcnws"; //Test Key	
 	$prd_conv_adult = "price_1MueyjHn7Uww4RvuOrqH7jaJ";
 	$prd_conv_kid = "price_1MsI3CHn7Uww4Rvuwkrm1kWE";
